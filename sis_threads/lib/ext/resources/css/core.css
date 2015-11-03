@@ -1,0 +1,847 @@
+/*
+ * Ext JS Library 2.2
+ * Copyright(c) 2006-2008, Ext JS, LLC.
+ * licensing@extjs.com
+ * 
+ * http://extjs.com/license
+ */
+
+.ext-el-mask {
+    z-index: 20000;
+    position: absolute;
+    top:0;
+    left:0;
+    -moz-opacity: 0.5;
+    opacity: .50;
+    filter: alpha(opacity=50);
+    background-color: #CCC;
+    width: 100%;
+    height: 100%;
+    zoom: 1;
+}
+.ext-el-mask-msg {
+    z-index: 20001;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border:1px solid #6593cf;
+    background: #c3daf9 url(../images/default/box/tb-blue.gif) repeat-x 0 -16px;
+    padding:2px;
+}
+.ext-el-mask-msg div {
+    padding:5px 10px 5px 10px;
+    background: #eee;
+    border:1px solid #a3bad9;
+    color:#222;
+    font:normal 11px tahoma, arial, helvetica, sans-serif;
+    cursor:wait;
+}
+
+.ext-shim {
+    position:absolute;
+    visibility:hidden;
+    left:0;
+    top:0;
+    overflow:hidden;
+}
+.ext-ie .ext-shim {
+    filter: alpha(opacity=0);
+}
+.ext-ie6 .ext-shim {
+    margin-left: 5px;
+    margin-top: 3px;
+}
+
+.x-mask-loading div {
+    padding:5px 10px 5px 25px;
+    background: #fbfbfb url( '../images/default/grid/loading.gif' ) no-repeat 5px 5px;
+    line-height: 16px;
+}
+/* class for hiding elements without using display:none */
+.x-hidden, .x-hide-offsets {
+    position:absolute;
+    left:-10000px;
+    top:-10000px;
+    visibility:hidden;
+}
+.x-hide-display {
+    display:none !important;
+}
+
+.x-hide-visibility {
+    visibility:hidden !important;
+}
+
+.x-masked {
+    overflow: hidden !important;
+}
+
+.x-masked select, .x-masked object, .x-masked embed {
+    visibility: hidden;
+}
+
+.x-layer {
+    visibility: hidden;
+}
+
+.x-unselectable, .x-unselectable * {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+}
+
+.x-repaint {
+    zoom: 1;
+    background-color: transparent;
+    -moz-outline: none;
+}
+
+.x-item-disabled {
+    color: gray;
+    cursor: default;
+    opacity: .6;
+    -moz-opacity: .6;
+    filter: alpha(opacity=60);
+}
+
+.x-item-disabled * {
+    color: gray !important;
+    cursor: default !important;
+}
+
+.x-splitbar-proxy {
+    position: absolute;
+    visibility: hidden;
+    z-index: 20001;
+    background: #aaa;
+    zoom: 1;
+    line-height: 1px;
+    font-size: 1px;
+    overflow: hidden;
+}
+
+.x-splitbar-h, .x-splitbar-proxy-h {
+    cursor: e-resize;
+    cursor: col-resize;
+}
+
+.x-splitbar-v, .x-splitbar-proxy-v {
+    cursor: s-resize;
+    cursor: row-resize;
+}
+
+.x-color-palette {
+    width: 150px;
+    height: 92px;
+    cursor: pointer;
+}
+
+.x-color-palette a {
+    border: 1px solid #fff;
+    float: left;
+    padding: 2px;
+    text-decoration: none;
+    -moz-outline: 0 none;
+    outline: 0 none;
+    cursor: pointer;
+}
+
+.x-color-palette a:hover, .x-color-palette a.x-color-palette-sel {
+    border: 1px solid #8BB8F3;
+    background: #deecfd;
+}
+
+.x-color-palette em {
+    display: block;
+    border: 1px solid #ACA899;
+}
+
+.x-color-palette em span {
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    line-height: 10px;
+    width: 10px;
+}
+
+.x-ie-shadow {
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    left:0;
+    top:0;
+    background:#777;
+    zoom:1;
+}
+
+.x-shadow {
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    left:0;
+    top:0;
+}
+
+.x-shadow * {
+    overflow: hidden;
+}
+
+.x-shadow * {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    clear: none;
+    zoom: 1;
+}
+
+/* top  bottom */
+.x-shadow .xstc, .x-shadow .xsbc {
+    height: 6px;
+    float: left;
+}
+
+/* corners */
+.x-shadow .xstl, .x-shadow .xstr, .x-shadow .xsbl, .x-shadow .xsbr {
+    width: 6px;
+    height: 6px;
+    float: left;
+}
+
+/* sides */
+.x-shadow .xsc {
+    width: 100%;
+}
+
+.x-shadow .xsml, .x-shadow .xsmr {
+    width: 6px;
+    float: left;
+    height: 100%;
+}
+
+.x-shadow .xsmc {
+    float: left;
+    height: 100%;
+    background: transparent url( ../images/default/shadow-c.png );
+}
+
+.x-shadow .xst, .x-shadow .xsb {
+    height: 6px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.x-shadow .xsml {
+    background: transparent url( ../images/default/shadow-lr.png ) repeat-y 0 0;
+}
+
+.x-shadow .xsmr {
+    background: transparent url( ../images/default/shadow-lr.png ) repeat-y -6px 0;
+}
+
+.x-shadow .xstl {
+    background: transparent url( ../images/default/shadow.png ) no-repeat 0 0;
+}
+
+.x-shadow .xstc {
+    background: transparent url( ../images/default/shadow.png ) repeat-x 0 -30px;
+}
+
+.x-shadow .xstr {
+    background: transparent url( ../images/default/shadow.png ) repeat-x 0 -18px;
+}
+
+.x-shadow .xsbl {
+    background: transparent url( ../images/default/shadow.png ) no-repeat 0 -12px;
+}
+
+.x-shadow .xsbc {
+    background: transparent url( ../images/default/shadow.png ) repeat-x 0 -36px;
+}
+
+.x-shadow .xsbr {
+    background: transparent url( ../images/default/shadow.png ) repeat-x 0 -6px;
+}
+
+.loading-indicator {
+    font-size: 11px;
+    background-image: url(../images/default/grid/loading.gif);
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 20px;
+    line-height: 16px;
+    margin: 3px;
+}
+
+.x-text-resize {
+    position: absolute;
+    left: -1000px;
+    top: -1000px;
+    visibility: hidden;
+    zoom: 1;
+}
+
+.x-drag-overlay {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image:url(../images/default/s.gif);
+    z-index: 20000;
+}
+
+.x-clear {
+    clear:both;
+    height:0;
+    overflow:hidden;
+    line-height:0;
+    font-size:0;
+}
+
+
+.x-spotlight {
+    z-index: 8999;
+    position: absolute;
+    top:0;
+    left:0;
+    -moz-opacity: 0.5;
+    opacity: .50;
+    filter: alpha(opacity=50);
+    background-color: #CCC;
+    width:0;
+    height:0;
+    zoom: 1;
+}
+
+.group_money{
+    position: absolute !important;
+    right: 16px !important;
+    top: 22px;
+    margin-top: 2px;
+}
+
+.tipo_moeda{
+    padding: 8px 10px 8px !important;
+    font-size: 12px !important;
+    border:none !important;
+    border-left:1px solid #ccc !important;
+}
+.tipo_moeda:hover{
+    /*background: #0f0 !important;*/
+}
+
+.divisor_row_marg_top{
+    margin-top: 20px;
+}
+.mg-top-5{
+    margin-top: 5px;
+}
+.mg-top-10{
+    margin-top: 10px;
+}
+.mg-top-15{
+    margin-top: 15px;
+}
+.mg-top-20{
+    margin-top: 20px;
+}
+.icheckbox_minimal-blue, .iradio_minimal-blue{
+    margin-right: 5px !important;
+    margin-left: 5px !important;
+}
+
+.col-md-1 label, .col-md-2 label, .col-md-3 label, .col-md-4 label, 
+.col-md-5 label, .col-md-6 label, .col-md-7 label, .col-md-8 label, 
+.col-md-9 label, .col-md-10 label, .col-md-11 label, .col-md-12 label{
+    font-weight: bold;
+}
+
+.tituloForm{
+    font-weight: bold;
+}
+
+table.table td.actions a:hover{
+    text-decoration: none;
+}
+
+/* Início Tabs */
+.nav_geral .nav-tabs{
+    border-bottom: 3px solid #a83437;
+}
+.nav_geral .nav-tabs li a{
+    border: none;
+    padding: 7px 15px;
+    padding-bottom: 4px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: arial;
+    background: #a8a8a8; /* Old browsers */
+    background: -moz-linear-gradient(top,  #a8a8a8 0%, #a7a7a7 50%, #9e9e9e 51%, #9e9e9e 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a8a8a8), color-stop(50%,#a7a7a7), color-stop(51%,#9e9e9e), color-stop(100%,#9e9e9e)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #a8a8a8 0%,#a7a7a7 50%,#9e9e9e 51%,#9e9e9e 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #a8a8a8 0%,#a7a7a7 50%,#9e9e9e 51%,#9e9e9e 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #a8a8a8 0%,#a7a7a7 50%,#9e9e9e 51%,#9e9e9e 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #a8a8a8 0%,#a7a7a7 50%,#9e9e9e 51%,#9e9e9e 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a8a8a8', endColorstr='#9e9e9e',GradientType=0 ); /* IE6-9 */
+}
+.nav_geral .nav-tabs li a:hover, .nav_geral .nav-tabs li a:focus, .nav_geral .nav-tabs li a:active{
+    background: #a83437; /* Old browsers */
+    background: -moz-linear-gradient(top,  #a83437 0%, #a83437 50%, #9e1d20 51%, #9e1d20 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a83437), color-stop(50%,#a83437), color-stop(51%,#9e1d20), color-stop(100%,#9e1d20)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #a83437 0%,#a83437 50%,#9e1d20 51%,#9e1d20 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #a83437 0%,#a83437 50%,#9e1d20 51%,#9e1d20 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #a83437 0%,#a83437 50%,#9e1d20 51%,#9e1d20 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #a83437 0%,#a83437 50%,#9e1d20 51%,#9e1d20 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a83437', endColorstr='#9e1d20',GradientType=0 ); /* IE6-9 */
+}
+.nav_geral .nav-tabs li.active a{
+    padding-bottom: 6px;
+    border: none;
+    color: #fff;
+    background: #a83437; /* Old browsers */
+    background: -moz-linear-gradient(top,  #a83437 0%, #a83437 50%, #9e1d20 51%, #9e1d20 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a83437), color-stop(50%,#a83437), color-stop(51%,#9e1d20), color-stop(100%,#9e1d20)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #a83437 0%,#a83437 50%,#9e1d20 51%,#9e1d20 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #a83437 0%,#a83437 50%,#9e1d20 51%,#9e1d20 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #a83437 0%,#a83437 50%,#9e1d20 51%,#9e1d20 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #a83437 0%,#a83437 50%,#9e1d20 51%,#9e1d20 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a83437', endColorstr='#9e1d20',GradientType=0 ); /* IE6-9 */
+}
+.nav_geral .nav-tabs li.active a:hover, .nav_geral .nav-tabs li.active a:focus, .nav_geral .nav-tabs li.active a:active{
+    padding-bottom: 6px;
+    border: none;
+    color: #fff;
+}
+/* Fim Tabs */
+
+/* Início novo modelo da index da pasta Views */
+.container_listagem{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+.container_listagem .row_table{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    margin-top: 20px !important;
+}
+.container_listagem .row_table>.actions{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+.container_listagem .row_table .col-md-12{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+.container_listagem .panel-primary>.panel-heading{
+    background-color: #f0ad4e !important;
+    border-color: #f0ad4e !important;
+}
+.container_listagem .panel-primary{
+    border-color: #dcdcdc !important;
+}
+.container_listagem .table>thead>tr>th {
+    background: #e6e6e6 !important;
+}
+.container_listagem td.actions .btn-primary{
+    background-color: #f0ad4e !important;
+    border-color: #f0ad4e !important;
+}
+.container_listagem td.actions .btn{
+    padding: 4px 8px !important;
+}
+#paginacao{
+    color: #9e9e9e;
+    line-height: 26px;
+}
+#paginacao .paginacao_num{
+    color: #1e1e1e;
+    font-size: 13px;
+}
+#paginacao .pager li>a {
+    background-color: #fff;
+    border: 1px solid #f0ad4e;
+    border-radius: 5px;
+    color: #f0ad4e;
+    padding: 4px 5px 3px 8px;
+}
+#paginacao .pager li>a:hover {
+    background-color: #f0ad4e;
+    border: 1px solid #f0ad4e;
+    color: #fff;
+}
+.container_listagem .actions a#add, .container_listagem .actions a#pesquisar, .container_listagem .actions a#voltar_pag{
+    background-color: #fff;
+    border: 1px solid #f0ad4e;
+    border-radius: 5px;
+    color: #f0ad4e;
+    text-decoration: none;
+    padding: 5px 8px 4px 8px;
+    font-weight: normal;
+    display: inline-block;
+    margin-bottom: 0px;
+}
+.container_listagem .actions a#add:hover, .container_listagem .actions a#pesquisar:hover, .container_listagem .actions a#voltar_pag:hover{
+    background-color: #f0ad4e;
+    border: 1px solid #f0ad4e;
+    color: #fff;
+}
+.container_listagem .actions a#add{
+    margin-right: 5px;
+}
+.container_listagem .actions a#pesquisar{
+    margin-right: 5px;
+}
+.container_listagem .actions a#voltar_pag{
+
+}
+.container_listagem .table>tbody>tr>th, .container_listagem .table>tfoot>tr>th, .container_listagem .table>tbody>tr>td, .container_listagem .table>tfoot>tr>td {
+    padding: 4px !important;
+}
+.container_listagem .table>thead>tr>th, .container_listagem .table>thead>tr>td{
+    padding: 6px !important;
+}
+/* Fim novo modelo da index da pasta Views */
+
+/* novo modelo para gerencia */
+.container-fluid .row .col-md-12 input.btn-success{
+    background-color: #f0ad4e !important;
+    border-color: #f0ad4e !important;
+}
+.container-fluid .row .col-md-12 input.btn-primary{
+    background-color: #d2322d !important;
+    border-color: #d2322d !important;
+}
+#divFiltro .col-md-12 input.btn-success{
+    background-color: #f0ad4e !important;
+    border-color: #f0ad4e !important;
+}
+#divFiltro .col-md-12 input.btn-primary{
+    background-color: #d2322d !important;
+    border-color: #d2322d !important;
+}
+/* Fim novo modelo para gerencia */
+
+/* Início nova listagem em perfil */
+#formPerfil .panel-primary>.panel-heading{
+    background-color: #f0ad4e !important;
+    border-color: #f0ad4e !important;
+}
+#formPerfil .panel-primary{
+    border-color: #dcdcdc !important;
+}
+#formPerfil .table>thead>tr>th {
+    background: #e6e6e6 !important;
+}
+#formPerfil td.actions .btn-primary{
+    background-color: #f0ad4e !important;
+    border-color: #f0ad4e !important;
+}
+#formPerfil td.actions .btn{
+    padding: 4px 8px !important;
+}
+#formPerfil .table>tbody>tr>th, #formPerfil .table>tfoot>tr>th, #formPerfil .table>tbody>tr>td, #formPerfil .table>tfoot>tr>td {
+    padding: 4px !important;
+}
+#formPerfil .table>thead>tr>th, #formPerfil .table>thead>tr>td{
+    padding: 6px !important;
+}
+/* Fim nova listagem em perfil */
+
+/* Início estilo para novo fundo na página área de pessoa */
+.well_pessoa {
+    min-height: 20px;
+    padding: 19px;
+    background-color: #f5f5f5;
+    border: 1px solid #eee;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    margin: 0 0 20px -5px;
+}
+.well_pessoa_sem_bg{
+    background-color: transparent !important;
+    border: none !important;
+}
+/* Fim estilo para novo fundo na página área de pessoa */
+
+/* Início alteração de cor do placeholder */
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #ccc !important;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #ccc !important;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #ccc !important;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #ccc !important;
+}
+/* Fim alteração de cor do placeholder */
+
+/* Fontes */
+@font-face {
+    font-family: "DIN-MediumAlternate";
+    src: url("../fonts/DIN-MediumAlternate.otf") format("otf"),
+        url("../fonts/DIN-MediumAlternate.ttf") format("truetype");
+}
+#paginacao{
+    font-family: DIN-MediumAlternate !important;
+}
+.row_table .actions{
+    font-family: DIN-MediumAlternate !important;
+}
+.panel-primary .panel-title{
+    font-family: DIN-MediumAlternate !important;
+}
+
+/*body{
+    font-family: 'Abel', sans-serif !important;
+}*/
+/* Fim Fontes */
+
+
+/* Início área de tarifário */
+.tab_int_ger {
+    overflow: auto;
+    width: 100%;
+}
+.tab_int_ger ul.nav-tabs{
+    width: 1340px;
+    margin-bottom: 8px;
+}
+
+@media all and (max-width: 1000px) {
+    #tab1 {
+        overflow: auto;
+        width: 905px;
+        padding: 0 5px;
+    }
+    #tab1 .tab_int_ger_cont{
+        width: 1340px;
+        margin-bottom: 8px;
+    }
+}
+@media all and (min-width: 1001px) and (max-width: 1220px) {
+    #tab1 {
+        overflow: auto;
+        width: 940px;
+        padding: 0 5px;
+    }
+    #tab1 .tab_int_ger_cont{
+        width: 1340px;
+        margin-bottom: 8px;
+    }
+}
+.tab-pane .table-bordered{
+    background: #fff;
+}
+.tab-pane .table-bordered thead tr{
+    background: #f5f5f5;
+}
+/* Fim área de tarifário */
+
+
+.modal-backdrop, .modal-backdrop.fade.in{
+    opacity: 0.5 !important;
+    filter: alpha(opacity=80) !important;
+}
+
+.modal-backdrop {
+    background-color: #ccc !important;
+}
+
+/* Início Modal alerta geral */
+.modal_alert_ger .responsive-utilities td.is-visible{
+    color:#468847;
+    background-color:#f2dede!important;
+}
+.modal_alert_ger .responsive-utilities td.is-hidden{
+    color:#ccc;
+    background-color:#f2dede!important;
+}
+.modal_alert_ger .responsive-utilities-test{
+    margin-top:5px;
+}
+.modal_alert_ger .responsive-utilities-test .col-xs-6{
+    margin-bottom:10px;
+}
+.modal_alert_ger .responsive-utilities-test span{
+    display:block;
+    padding:15px 10px;
+    font-size:14px;
+    font-weight:700;
+    line-height:1.1;
+    text-align:center;
+    border-radius:4px;
+}
+.modal_alert_ger .visible-on .col-xs-6 .hidden-xs,.modal_alert_ger .visible-on .col-xs-6 .hidden-sm,.modal_alert_ger .visible-on .col-xs-6 .hidden-md,.modal_alert_ger .visible-on .col-xs-6 .hidden-lg,
+.modal_alert_ger .hidden-on .col-xs-6 .hidden-xs,.modal_alert_ger .hidden-on .col-xs-6 .hidden-sm,.modal_alert_ger .hidden-on .col-xs-6 .hidden-md,.modal_alert_ger .hidden-on .col-xs-6 .hidden-lg{
+    color:#999;
+    border:1px solid #ddd;
+}
+.modal_alert_ger .visible-on .col-xs-6 .visible-xs-block,.modal_alert_ger .visible-on .col-xs-6 .visible-sm-block,.modal_alert_ger .visible-on .col-xs-6 .visible-md-block,
+.modal_alert_ger .visible-on .col-xs-6 .visible-lg-block,.modal_alert_ger .hidden-on .col-xs-6 .visible-xs-block,.modal_alert_ger .hidden-on .col-xs-6 .visible-sm-block,
+.modal_alert_ger .hidden-on .col-xs-6 .visible-md-block,.modal_alert_ger .hidden-on .col-xs-6 .visible-lg-block{
+    color:#525252;
+    background-color:#f2dede;
+    border:1px solid #f2dede;
+}
+/* Fim Modal alerta geral */
+
+/* Início Caixa de alerta */
+.box_alert_ger{
+    width:220px;
+    height: auto;
+    display:none;
+    position: fixed;
+    z-index:9999;
+}
+.box_alert_mask {
+    position:fixed;
+    left:0;
+    top:0;
+    z-index:9000;
+    background-color: #000;
+    display:none;
+}
+.box_alert_ger_tit{
+    color: #fff;
+    text-align: center;
+    font-weight: normal;
+}
+/* Fim Caixa de alerta */
+
+/* Início Página relatorio e reservas */
+.relat_reserv_pag_ger{
+    /*font-family: Tahoma;*/
+    font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
+    padding: 0 !important;
+}
+
+.relat_reserv_pag_ger #form_venda{
+    width: 100%;
+    float: left;
+    clear: both;
+    margin: 0;
+    padding: 20px 5px 0 5px;
+}
+
+.relat_reserv_pag_ger .total_valor_ger{
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+}
+.relat_reserv_pag_ger .total_valor_ger_cat{
+    width: 20%;
+    float: left;
+}
+.relat_reserv_pag_ger .total_valor_ger_cat .total_valor_ger_cat_inte{
+    height: 100px;
+    padding: 30px 0 15px 20px;
+    background-color: #FBFBFB;
+    border: 1px solid #ccc;
+    text-align: left;
+    margin: 0 7px 0 0;
+    -webkit-transition: all 700ms ease;
+    -moz-transition: all 700ms ease;
+    -ms-transition: all 700ms ease;
+    -o-transition: all 700ms ease;
+    transition: all 700ms ease;
+}
+.relat_reserv_pag_ger .total_valor_ger_cat .total_valor_ger_cat_inte:hover{
+    background: #EFEFEF;
+    border: 1px solid #ccc;
+    -webkit-transition: all 700ms ease;
+    -moz-transition: all 700ms ease;
+    -ms-transition: all 700ms ease;
+    -o-transition: all 700ms ease;
+    transition: all 700ms ease;
+}
+.relat_reserv_pag_ger .total_valor_ger_cat:last-child .total_valor_ger_cat_inte{
+    margin: 0;
+}
+.relat_reserv_pag_ger .total_valor_ger_cat .total_valor_ger_cat_tit{
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #B0B0B0;
+}
+.relat_reserv_pag_ger .total_valor_ger_cat .total_valor_ger_cat_prec{
+    padding: 0;
+    margin: 0;
+    font-size: 32px;
+}
+
+.relat_reserv_pag_ger .h5_tit_bor_bottom{
+    border: none !important;
+}
+
+.relat_reserv_pag_ger #form_venda .col-md-2{
+    padding: 5px;
+}
+.relat_reserv_pag_ger #data_inicio, #data_fim{
+    width: 85px;
+}
+
+.relat_reserv_pag_ger #tabela_list_reserv_ger{
+    padding-top: 20px;
+    border: 1px solid #ccc;
+}
+.relat_reserv_pag_ger #tabela_list_reserv_ger th, .relat_reserv_pag_ger #tabela_list_reserv_ger td, .relat_reserv_pag_ger .total_valor_ger_cat_prec{
+    color: #636363;
+}
+.relat_reserv_pag_ger .total_valor_ger_cat_prec span{
+    font-size: 15px;
+    color: #636363;
+    vertical-align: middle;
+    display: inline-block;
+    padding-right: 3px;
+}
+
+.relat_reserv_pag_ger #tabela_list_reserv_ger thead th {
+    white-space: nowrap;
+    overflow-x:hidden;
+    padding: 3px;
+}
+.relat_reserv_pag_ger #tabela_list_reserv_ger tbody td {
+    padding: 3px;
+}
+
+.relat_reserv_pag_ger tfoot{
+    background: transparent;
+}
+.relat_reserv_pag_ger .jTPS tfoot td {
+    padding: 5px;
+    background: #fff;
+}
+.relat_reserv_pag_ger .pagination_ger{
+    width: 100%;
+    margin: 0 auto;
+}
+.relat_reserv_pag_ger tfoot .selectPerPage {
+    float: none;
+    text-align: center;
+}
+.relat_reserv_pag_ger .jTPS tfoot .status {
+    text-align: center;
+}
+.relat_reserv_pag_ger .jTPS .sortedColumn {
+    background: #EDEDED none repeat scroll 0% 0% !important;
+    border-right: 1px solid #9F9F9F;
+    border-left: 1px solid #9F9F9F;
+}
+.relat_reserv_pag_ger .jTPS .sortDesc, .relat_reserv_pag_ger .jTPS .sortAsc {
+    background-color: #EDEDED !important;
+    border-right: 1px solid #9F9F9F !important;
+    border-left: 1px solid #9F9F9F !important;
+    background-position: right !important;
+    background-size: 22px !important;
+}
+/* Fim Página relatorio e reservas */

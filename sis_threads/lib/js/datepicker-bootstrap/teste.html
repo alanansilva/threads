@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Datepicker for Bootstrap</title>
+
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <link id="bs-css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Início datetimepicker -->
+        <link rel="stylesheet" href="css/datepicker.css" />
+        <script src="js/bootstrap-datepicker.js"></script>
+        <script src="js/locales/bootstrap-datepicker.pt-BR.js"></script>
+        <!-- Fim datetimepicker -->
+
+        <style type="text/css">
+            .datetimepicker_cursor_poin{
+                cursor: pointer;
+            }
+        </style>
+        <script>
+            $(function() {
+                $('.data').datepicker({
+                    format: "dd/mm/yyyy",
+                    language: "pt-BR",
+                    autoclose: true
+                });
+            });
+        </script>
+
+
+
+
+
+    </head>
+
+    <body>
+        <div class="input-group" id="datetimepicker1">
+            <input type="text" class="form-control data">
+            <span class="input-group-addon add-on datetimepicker_cursor_poin">
+                <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+            </span>
+        </div>
+    </body>
+</html>

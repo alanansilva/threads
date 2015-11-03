@@ -1,0 +1,48 @@
+/* =======================================
+
+                Main Stylesheet
+                
+                Building on Twitter Bootstrap
+                http://twitter.github.com/bootstrap/
+                
+========================================== */
+
+/* New styles below */
+
+label.valid {
+    width: 24px;
+    height: 24px;
+    background: url(../assets/img/valid.png) center center no-repeat;
+    display: inline-block;
+    text-indent: -9999px;
+    position: absolute;
+    right: 20px;
+    top: 26px;
+    z-index: 1;
+}
+label.error {
+    font-weight: bold;
+    color: #b94a48;
+    padding: 2px 8px;
+    margin-top: 2px;
+}
+
+/* Início estilização de validação positiva para spinner */
+.bootstrap-touchspin label.valid{
+    right: 35px;
+    top: 4px;
+}
+.bootstrap-touchspin label.error{
+    position: absolute;
+}
+.bootstrap-touchspin label.error > input{
+    margin-bottom: 20px;
+}
+/* Fim estilização de validação positiva para spinner */
+
+/* Início estilização de validação positiva para data */
+.data label.valid{
+    right: 45px;
+    top: 4px;
+}
+/* Fim estilização de validação positiva para data */

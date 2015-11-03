@@ -1,0 +1,51 @@
+body {
+	background-color:#93b0cc;
+	font: normal 11px Tahoma, Verdana, Helvetica, sans-serif;
+}
+
+#imagemFundo{
+	background-image: url(../images/bgLoginNovo.jpg);
+	background-repeat: repeat-x;
+	background-color: #FFFFFF;
+}
+
+#login-win .x-window-mc {
+	background:#fff none;
+	border:1px solid #eee;
+}
+
+#my-form .x-plain-body {
+	background:#f9f9f9 none;
+	color:#222;
+	padding:10px 0  0 10px;
+	border:solid 0.1em #99BBE8;
+}
+
+#login-win .x-window-body {
+	background:#FFFFFF none repeat scroll 0%;
+	border:1px solid #99BBE8;
+}
+
+.x-window-dlg .ext-sistema-load {
+	background:transparent url('../images/search.gif') no-repeat top left;
+	height:46px;
+	width:50px;	
+}
+.loginBox td {
+	font-size: 11px;
+	color: #676767;
+}
+.popupBody {
+color: black;
+font-size: 11px;
+line-height: 1.5;
+}
+.Field150
+{
+    width: 150px;
+}
+.FormButton {
+font-size: 11px;
+width: 80px;
+font-family: Tahoma, Verdana, Helvetica, sans-serif;
+}

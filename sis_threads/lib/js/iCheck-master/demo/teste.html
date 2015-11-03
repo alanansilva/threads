@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>icheck teste</title>
+        <meta charset="utf-8">
+        <meta content="width=device-width" name="viewport">
+        
+        
+        <script src="./js/jquery.js"></script>
+        
+        <link href="../skins/all.css?v=1.0.2" rel="stylesheet">
+        <script src="../icheck.js?v=1.0.2"></script>
+    </head>
+    <body>
+
+
+        <div class="skin skin-minimal">
+
+            <input tabindex="5" type="checkbox" id="minimal-checkbox-1">
+            <label for="minimal-checkbox-1">Checkbox 1</label>
+
+            <input tabindex="6" type="checkbox" id="minimal-checkbox-2" checked>
+            <label for="minimal-checkbox-2">Checkbox 2</label>
+
+            <input type="checkbox" id="minimal-checkbox-disabled" disabled>
+            <label for="minimal-checkbox-disabled">Disabled</label>
+
+            <input type="checkbox" id="minimal-checkbox-disabled-checked" checked disabled>
+            <label for="minimal-checkbox-disabled-checked">Disabled &amp; checked</label>
+
+            <input tabindex="7" type="radio" id="minimal-radio-1" name="minimal-radio">
+            <label for="minimal-radio-1">Radio button 1</label>
+
+            <input tabindex="8" type="radio" id="minimal-radio-2" name="minimal-radio" checked>
+            <label for="minimal-radio-2">Radio button 2</label>
+
+            <input type="radio" id="minimal-radio-disabled" disabled>
+            <label for="minimal-radio-disabled">Disabled</label>
+
+            <input type="radio" id="minimal-radio-disabled-checked" checked disabled>
+            <label for="minimal-radio-disabled-checked">Disabled &amp; checked</label>
+
+            <script>
+                $(document).ready(function() {
+                    $('.skin-minimal input').iCheck({
+                        checkboxClass: 'icheckbox_minimal-blue',
+                        radioClass: 'iradio_minimal-blue',
+                        increaseArea: '20%'
+                    });
+                });
+            </script>
+        </div>
+    </body>
+</html>
