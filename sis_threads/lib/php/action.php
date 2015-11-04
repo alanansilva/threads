@@ -1,53 +1,27 @@
 <?php
-
-ini_set('display_errors', 1);
-
-ob_clean();
-
+ob_start();
 session_start();
 
 $debug = 1;
 
-
-
 $funcao = isset($_REQUEST["action"]) ? $_REQUEST["action"] : "";
 
-
-
 if (function_exists($funcao)) {
-
     call_user_func($funcao);
-
 }
 
-
-
 function logar() {
-
     require_once 'conn.php';
-
-
-
     $nome = isset($_REQUEST["nome"]) ? addslashes($_REQUEST["nome"]) : "";
-
     $senha = isset($_REQUEST["senha"]) ? addslashes($_REQUEST["senha"]) : "";
-
-
 
     if (!empty($nome) && !empty($nome)) {
 
-
-
         $sql = "SELECT id FROM usuario WHERE login = '" . $nome . "' AND senha = MD5('" . $senha . "') AND ativo = 1";
-
-
 
         $rs = DBSql::getArray($sql);
 
-
-
         if (!empty($rs['id'])) {
-
 
             $sql = "SELECT ";
             $sql.= "    usu.id AS usuario_id ";
@@ -67,7 +41,7 @@ function logar() {
             $sql.= "     AND usu.id        = " . $rs['id'];
 
             $rs = DBSql::getArray($sql);
-            
+
             $_SESSION['dados']['usuario']['id'] = $rs['usuario_id'];
             $_SESSION['dados']['usuario']['nome'] = $rs['nome'];
             $_SESSION['dados']['usuario']['login'] = $rs['login'];
@@ -86,4 +60,5 @@ function logar() {
         }
     }
 }
+
 ?>

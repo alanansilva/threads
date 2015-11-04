@@ -30,7 +30,7 @@ $tipoPessoa = new TipoPessoa();
 $usuario = new Usuario();
 $iconeBootstrap = new IconeBootstrap();
 
-$url = "http://localhost/threads/curl/";
+$url = "http://curl.threads.com.br/";
 define('URL_POST_FILE_REMOTE', $url);
 define('PESSOA_ID', 1);
 ?>

@@ -2,13 +2,13 @@
 
 session_start();
 unset($_SESSION['dados']);
-define('URL_POST_FILE_REMOTE', 'http://74.63.255.164/curl/');
+define('URL_POST_FILE_REMOTE', 'http://curl.threads.com.br/');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
     <head>
-        <title>Foco Multimídia</title>
+        <title>THREADS</title>
         <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
         <meta name="language" content="pt-br" />
         <meta http-equiv="imagetoolbar" content="no" />
@@ -46,7 +46,7 @@ define('URL_POST_FILE_REMOTE', 'http://74.63.255.164/curl/');
                             <div class="panel panel-info" style="border-color: #DDD; width: 400px;">
                                 <div class="panel-heading" style="background-color: #fff; border: none; margin-top: 25px">
                                     <div class="panel-title">
-                                        <img src="<?php echo URL_POST_FILE_REMOTE?>motor_reserva/images/logo.png" alt="E-Marketer 2010" /> 
+                                        <!--<img src="<?php echo URL_POST_FILE_REMOTE?>motor_reserva/images/logo.png" alt="E-Marketer 2010" />--> 
                                     </div>
                                 </div>
 

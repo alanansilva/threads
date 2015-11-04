@@ -24,7 +24,7 @@ define('USUARIO_ID', $_SESSION['dados']['usuario']['id']);
 define('PESSOA_ID', $_SESSION['dados']['pessoa']['id']);
 //define('URL_POST_FILE_REMOTE', 'http://joelsonbraga.com.br/checkok/curl/');
 //define('URL_POST_FILE_REMOTE', 'http://74.63.255.164/curl/');
-$url = "http://3heads/projeto_3heads/curl/";
+$url = "http://curl.threads.com.br/";
 define('URL_POST_FILE_REMOTE', $url);
 define('PERFIL_ID', $_SESSION['dados']['pessoa']['perfil_id']);
 define('TIPO_PESSOA_ID', $_SESSION['dados']['pessoa']['tipo_pessoa_id']);

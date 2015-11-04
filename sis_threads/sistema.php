@@ -2,7 +2,7 @@
 session_start();
 require_once 'lib/php/session.php';
 require_once 'lib/php/menu.php';
-$url = "http://3heads/projeto_3heads/curl/";
+$url = "http://curl.threads.com.br/";
 define('URL_POST_FILE_REMOTE', $url);
 ?>
 <html>
@@ -10,7 +10,7 @@ define('URL_POST_FILE_REMOTE', $url);
         <meta http-equiv="Content-Language" content="pt_br" />
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 
-        <title>..:: 3Heads ::.</title>
+        <title>..:: THREADS ::.</title>
 
         <link rel="stylesheet" type="text/css" href="lib/ext/resources/css/ext-all.css" />
         <!--	<link type="text/css" rel="stylesheet" media="screen, print" href="lib/ext/resources/css/xtheme-gray.css" />-->
@@ -187,7 +187,7 @@ define('URL_POST_FILE_REMOTE', $url);
                 </a>
             </div>
             <div style='width: 200px; display:inline-block; padding:10px 0 0 15px; margin:0'>
-                <img src="<?php echo URL_POST_FILE_REMOTE ?>motor_reserva/images/logo_foco.png" alt="Foco Multimídia">
+                <!--<img src="<?php echo URL_POST_FILE_REMOTE ?>motor_reserva/images/logo_foco.png" alt="Foco Multimídia">-->
             </div>
             <div class="clear"></div>
             <div style="float:right; padding: 7px; margin-top:-30px; text-align:right">
