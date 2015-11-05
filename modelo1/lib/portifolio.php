@@ -18,8 +18,9 @@
 //             UtilString::pr($objColConteudo);
             while ($objColConteudo->proximo()) {
                 $objConteudo = $objColConteudo->getItem();
-                $objImagem = $imagem->getImagem(null, 7, $objConteudo['id']);
-               
+                $objColImagem = $imagem->getColecaoImagem(7, $objConteudo['id']);
+                while ($objColImagem->proximo()) {
+                    $objImagem = $objColImagem->getItem();
                     ?>
             <ul id="da-thumbs" class="da-thumbs">
                 <li>
@@ -31,6 +32,7 @@
                     </a>
                 </li>
                          <?php
+            }
             }
             ?>
             </ul>

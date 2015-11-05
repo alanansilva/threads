@@ -65,14 +65,15 @@
     }
 </style>
 <?php
+$path = URL_POST_FILE_REMOTE;
 $objPessoa = $pessoa->getPessoa(null, 1);
-$objImagem= $imagem -> getImagem(null, MENU_ID, $objPessoa['id']);
+$objImagem= $imagem -> getImagem(null, 5, $objPessoa['id']);
 ?>
 <div class="header" style="width: 100%; position: fixed; z-index: 3;">
     <div class="header-left">
         <a class="scroll" href="#home">
             <!--<img src="http://www.focomultimidia.com/img/logo.png" alt="Logo" />-->
-            <img src="<?php echo$objImagem['nm_imagem'] ?>" alt="Logo" />
+            <img src="<?php echo $path. $objImagem['nome_img'] ?>" alt="Logo" />
         </a>
     </div>
     <div class="navigation">
