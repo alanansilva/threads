@@ -89,7 +89,7 @@ require_once 'default.php';
                                 ?>
                                 <tr  style='text-align: center;'>
                                     <td><?php echo $obj['id'] ?></td>
-                                    <td><?php echo $objConteudoCategoria['nome'] ?></td>
+                                    <td><?php echo utf8_decode($objConteudoCategoria['nome']) ?></td>
                                     <td><?php
                             if (!empty($obj['nome'])) {
                                 echo $obj['nome'];

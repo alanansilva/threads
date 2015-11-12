@@ -171,7 +171,7 @@
             <div class="container">
                 <div class="port-grids">
                     <?php
-                         $path = URL_POST_FILE_REMOTE;
+                    $path = URL_POST_FILE_REMOTE;
                     $objColConteudo = $conteudo->getColecaoConteudo(null, 1);
                     while ($objColConteudo->proximo()) {
                         $objConteudo = $objColConteudo->getItem();
@@ -182,40 +182,40 @@
                             });
                         </script>
 
-                           <?php
-                    $objColImagem = $imagem->getColecaoImagem(7, $objConteudo['id']);
-                    while ($objColImagem->proximo()) {
-                        $objImagem = $objColImagem->getItem();
-                        ?>
-                        <div class="col-md-3 col-sm-4 col-xs-6 port-grid wow zoomInLeft animated">
-                            <a class="inline_html_prod_<?php echo $objConteudo['id'] ?>" href="#inline_content_prod_<?php echo $objConteudo['id'] ?>">
-                                <img src="<?php echo $path . $objImagem['nome_img']?>" class="img-responsive" alt="" />
-                            </a>
-                            <div class="text">
+                        <?php
+                        $objColImagem = $imagem->getColecaoImagem(7, $objConteudo['id']);
+                        while ($objColImagem->proximo()) {
+                            $objImagem = $objColImagem->getItem();
+                            ?>
+                            <div class="col-md-3 col-sm-4 col-xs-6 port-grid wow zoomInLeft animated">
                                 <a class="inline_html_prod_<?php echo $objConteudo['id'] ?>" href="#inline_content_prod_<?php echo $objConteudo['id'] ?>">
-                                    <h3><?php echo $objConteudo['titulo'] ?></h3>
+                                    <img src="<?php echo $path . $objImagem['nome_img'] ?>" class="img-responsive" alt="" />
                                 </a>
-                                <div class="port-grid-price">R$ <?php echo $objConteudo['valor'] ?></div>
-                                <!--<div class="port-grid-price-sub">8X R$ 10,75</div>-->
-                                <p><?php echo $objConteudo['descricao_breve'] ?></p>
-                            </div>
-                        </div>
-
-                        <div style='display:none'>
-                            <div id='inline_content_prod_<?php echo $objConteudo['id'] ?>' style='padding:10px; background:#fff;'>
-                                <img src="<?php echo $path . $objImagem['nome_img']?>" class="img-responsive" alt="" width="100%" />
                                 <div class="text">
-                                    <h2><?php echo $objConteudo['titulo'] ?></h2>
-                                    <div>
-                                        <strong style="font-size: 18px">R$ <?php echo $objConteudo['valor'] ?></strong>
-                                        <!--<span>8X R$ 10,75</span>-->
-                                    </div>
-                                    <p><?php echo $objConteudo['descricao'] ?></p>
+                                    <a class="inline_html_prod_<?php echo $objConteudo['id'] ?>" href="#inline_content_prod_<?php echo $objConteudo['id'] ?>">
+                                        <h3><?php echo utf8_decode($objConteudo['titulo']) ?></h3>
+                                    </a>
+                                    <div class="port-grid-price">R$ <?php echo $objConteudo['valor'] ?></div>
+                                    <!--<div class="port-grid-price-sub">8X R$ 10,75</div>-->
+                                    <p><?php echo utf8_decode($objConteudo['descricao_breve']) ?></p>
                                 </div>
                             </div>
-                        </div>
-                        <?php
-                    }
+
+                            <div style='display:none'>
+                                <div id='inline_content_prod_<?php echo $objConteudo['id'] ?>' style='padding:10px; background:#fff;'>
+                                    <img src="<?php echo $path . $objImagem['nome_img'] ?>" class="img-responsive" alt="" width="100%" />
+                                    <div class="text">
+                                        <h2><?php echo utf8_decode($objConteudo['titulo']) ?></h2>
+                                        <div>
+                                            <strong style="font-size: 18px">R$ <?php echo $objConteudo['valor'] ?></strong>
+                                            <!--<span>8X R$ 10,75</span>-->
+                                        </div>
+                                        <p><?php echo utf8_decode($objConteudo['descricao']) ?></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
+                        }
                     }
                     ?>
                     <!--div class="col-md-3 col-sm-4 col-xs-6 port-grid wow zoomInLeft animated">

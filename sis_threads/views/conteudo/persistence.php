@@ -19,15 +19,15 @@ $iconeBootstrap = new IconeBootstrap();
 
 require_once '../../lib/php/UploadFiles.php';
 
-foreach ($_REQUEST as $key => $value){
-     if (!is_array($value)) {
-        $_REQUEST[$key] = utf8_decode($value);
-    } elseif (is_array($value)) {
-        foreach ($value as $key2 => $value2) {
-            $_REQUEST[$key][$key2] = utf8_decode($value2);
-        }
-    }
-}
+//foreach ($_REQUEST as $key => $value){
+//     if (!is_array($value)) {
+//        $_REQUEST[$key] = utf8_decode($value);
+//    } elseif (is_array($value)) {
+//        foreach ($value as $key2 => $value2) {
+//            $_REQUEST[$key][$key2] = utf8_decode($value2);
+//        }
+//    }
+//}
 
 if ($_REQUEST['acao'] == 1 && $_REQUEST['operacao'] == 2) {
     if ($data->add())

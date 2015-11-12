@@ -2,6 +2,8 @@
 //error_reporting(E_ALL);
 //ini_set('display_errors', 1);
 
+header("Content-Type: text/html; charset=ISO-8859-1", true);
+
 require_once 'lib/conn.php';
 require_once 'lib/models/Pessoa.php';
 require_once 'lib/models/Banner.php';
@@ -55,7 +57,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <link rel="stylesheet" href="css/chocolat.css" type="text/css">
         <!-- for-mobile-apps -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="content-Type" content="text/html; charset=iso-8859-1" />
         <meta name="keywords" content="Bigwig Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
               Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>

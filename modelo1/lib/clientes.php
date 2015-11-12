@@ -11,7 +11,6 @@
                     <?php
                     $path = URL_POST_FILE_REMOTE;
                     $objColConteudo = $conteudo->getColecaoConteudo(null, 6);
-//             UtilString::pr($objColConteudo);
                     while ($objColConteudo->proximo()) {
                         $objConteudo = $objColConteudo->getItem();
                         $objImagem = $imagem->getImagem(null, 7, $objConteudo['id']);

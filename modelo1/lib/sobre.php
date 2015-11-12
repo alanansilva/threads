@@ -29,8 +29,8 @@
                 ?>
             </div>
             <div class="col-md-6 award-right">
-                <h3><?php echo $objConteudo['titulo'] ?></h3>
-                <p><?php echo $objConteudo['descricao'] ?></p>
+                <h3><?php echo utf8_decode($objConteudo['titulo']) ?></h3>
+                <p><?php echo utf8_decode($objConteudo['descricao']) ?></p>
             </div>
             <div class="clearfix"></div>
         </div>

@@ -58,7 +58,7 @@ if ($_REQUEST['acao'] == 2 && $_REQUEST['operacao'] == 1) {
 
                 <div class="col-md-4 configuracao_equipe_2" style="display: <?php echo $display2 ?>" >
                     <label for="titulo">* Titulo</label>
-                    <input type='text' name='titulo'  id='titulo' class='form-control'  value='<?php echo $obj['titulo'] ?>' placeholder="Titulo">
+                    <input type='text' name='titulo'  id='titulo' class='form-control'  value='<?php echo utf8_decode($obj['titulo']) ?>' placeholder="Titulo">
                 </div>
                 <div class="col-md-4 configuracao_equipe_2" style="display: <?php echo $display2 ?>">
                     <label for="subtitulo">* Subtitulo</label>

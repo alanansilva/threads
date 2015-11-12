@@ -18,9 +18,9 @@
                 ?>
                 <div class="col-md-4 ser-grid">
                     <span class="<?php echo $objIconeBootstrap['classe'] ?>" aria-hidden="true"></span>
-                    <h4><?php echo $objConteudo['titulo'] ?></h4>
+                    <h4><?php echo utf8_decode($objConteudo['titulo']) ?></h4>
                     <span class="ser-gridline"> </span>
-                    <p><?php echo $objConteudo['descricao_breve'] ?></p>
+                    <p><?php echo utf8_decode($objConteudo['descricao_breve']) ?></p>
 
                 </div>
                 <?php

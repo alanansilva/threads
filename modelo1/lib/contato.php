@@ -21,11 +21,11 @@ $objPessoa = $pessoa->getPessoa();
         <div class="contact-grids">
             <div class="col-md-4 contact-grid text-center">
                 <div class="point-icon"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></div>
-                <p><?php echo $objPessoa['endereco'] ?></p>
+                <p><?php echo utf8_decode($objPessoa['endereco']) ?></p>
             </div>
             <div class="col-md-4 contact-grid text-center">
                 <div class="point-icon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></div>
-                <p><a href="mailto:info@example.com"><?php echo $objPessoa['email'] ?></a></p>
+                <p><a href="mailto:info@example.com"><?php echo utf8_decode($objPessoa['email']) ?></a></p>
             </div>
             <div class="col-md-4 contact-grid text-center">
                 <div class="point-icon"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></div>

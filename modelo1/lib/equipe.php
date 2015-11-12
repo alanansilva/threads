@@ -19,9 +19,9 @@
                         $objImagem = $objColImagem->getItem();
                         ?>
                         <img src="<?php echo $path . $objImagem['nome_img']?>" alt="Nossa equipe" />
-                        <h3><?php echo $objConteudo['nome'] ?></h3>
-                        <h4><?php echo $objConteudo['cargo'] ?></h4>
-                        <p><?php echo $objConteudo['funcao'] ?></p>
+                        <h3><?php echo utf8_decode($objConteudo['nome']) ?></h3>
+                        <h4><?php echo utf8_decode($objConteudo['cargo']) ?></h4>
+                        <p><?php echo utf8_decode($objConteudo['funcao']) ?></p>
                     </div>
                 </div>
                 <?php
