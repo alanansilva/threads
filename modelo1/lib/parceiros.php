@@ -25,6 +25,7 @@
                 position: relative;
                 width: 100%;
             }
+            
         </style>
         <ul>
             <?php

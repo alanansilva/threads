@@ -410,11 +410,10 @@ a.callbacks_nav.callbacks2_nav.next {
 }
 .header-left{
     float:left;
-
-    margin-top: 6px;
+    margin-top: 5px;
 }
 .header-left a{
-    font-size: 46px;
+    /*font-size: 46px;*/
     color: #03BEF0;
     text-decoration: none;
     font-family: 'Roboto Slab', serif;
@@ -1059,7 +1058,8 @@ div#portfolio {
     }
     ul.nav1{
         display:none;
-        background:#020202;
+        /*background: #020202;*/
+        background: rgba(255,255,255,0.9);
     }
     .navigation ul.nav1 li {
         display: inline-block;
@@ -1613,7 +1613,7 @@ div#portfolio {
         padding: 10px 0;
     }
     .navigation ul {
-        top: 51px;
+        top: 60px;
     }
     .banner-info {
         margin-top: 12px;

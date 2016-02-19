@@ -26,7 +26,7 @@
             }
             .port-grid {
                 background: #eee;
-                width: 24.2%;
+                /*width: 24.2%;*/
                 float: left;
                 margin-right: 1.0%;
                 margin-bottom: 10px;
@@ -168,7 +168,7 @@
 
         <!--/port-section-->
         <div id="features" class="port-section">
-            <div class="container">
+<!--            <div class="container">-->
                 <div class="port-grids">
                     <?php
                     $path = URL_POST_FILE_REMOTE;
@@ -187,7 +187,7 @@
                         while ($objColImagem->proximo()) {
                             $objImagem = $objColImagem->getItem();
                             ?>
-                            <div class="col-md-3 col-sm-4 col-xs-6 port-grid wow zoomInLeft animated">
+                            <div class="col-md-3 col-sm-4 col-xs-12 port-grid wow zoomInLeft animated">
                                 <a class="inline_html_prod_<?php echo $objConteudo['id'] ?>" href="#inline_content_prod_<?php echo $objConteudo['id'] ?>">
                                     <img src="<?php echo $path . $objImagem['nome_img'] ?>" class="img-responsive" alt="" />
                                 </a>
@@ -330,7 +330,7 @@
                     </div-->
                     <div class="clearfix"></div>
                 </div>
-            </div>
+<!--            </div>-->
         </div>
     </div>
 </div>

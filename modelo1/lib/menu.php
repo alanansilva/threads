@@ -63,6 +63,9 @@
         text-decoration: none;
         outline: none;
     }
+    #logo_topo{
+        height: 60px;
+    }
 </style>
 <?php
 $path = URL_POST_FILE_REMOTE;
@@ -73,7 +76,7 @@ $objImagem= $imagem -> getImagem(null, 5, $objPessoa['id']);
     <div class="header-left">
         <a class="scroll" href="#home">
             <!--<img src="http://www.focomultimidia.com/img/logo.png" alt="Logo" />-->
-            <img src="<?php echo $path. $objImagem['nome_img'] ?>" alt="Logo" />
+            <img src="<?php echo $path. $objImagem['nome_img'] ?>" alt="Logo" id="logo_topo" />
         </a>
     </div>
     <div class="navigation">
