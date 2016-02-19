@@ -1310,8 +1310,12 @@ div#portfolio {
     .header-left {
         float: left;
     }
+    .navigation ul.nav1 {
+        overflow: auto;
+        max-height: 370px;
+    }
     .navigation ul.nav1 li {
-        padding: 7px 0;
+        padding: 0;
     }
     .header-left a {
         font-size: 33px;
@@ -1473,7 +1477,7 @@ div#portfolio {
         padding: 14px 0;
     }
     .navigation ul {
-        top: 54px;
+        top: 63px;
     }
 
 }
@@ -1483,6 +1487,12 @@ div#portfolio {
     }
     nav a {
         font-size: 13px;
+
+        display: inline-block;
+        width: 100%;
+        padding: 15px 20px 15px !important;
+        border-top: 1px solid #ccc;
+        text-align: left;
     }
     .banner-info {
         width: 100%;
